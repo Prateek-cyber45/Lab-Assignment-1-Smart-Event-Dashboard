@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Event Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>🎯 Smart Event Dashboard</h1>
+    </header>
+
+    <main class="main">
+
+        <section class="form-section">
+            <h2>Add New Event</h2>
+
+            <form id="eventForm" autocomplete="off">
+
+                <div class="form-group">
+                    <label for="title">Event Title</label>
+                    <input type="text" id="title" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Event Date</label>
+                    <input type="date" id="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <select id="category" required>
+                        <option value="">Select Category</option>
+                        <option value="Conference">Conference</option>
+                        <option value="Workshop">Workshop</option>
+                        <option value="Meeting">Meeting</option>
+                        <option value="Personal">Personal</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" required></textarea>
+                </div>
+
+                <button type="submit" class="primary-btn">Add Event</button>
+
+            </form>
+        </section>
+
+        <section class="events-section">
+            <h2>My Events</h2>
+
+            <div class="event-controls">
+                <button id="clearAll">Clear All Events</button>
+                <button id="addSample">Add Sample Events</button>
+            </div>
+
+            <div id="eventContainer">
+                <p id="emptyMessage">No events yet. Add your first event!</p>
+            </div>
+        </section>
+
+    </main>
+
+    <section class="summary-section">
+        <h2>Dashboard Summary</h2>
+
+        <div class="summary-box">
+            <p>Total Events: <span id="eventCount">0</span></p>
+            <p>Upcoming Events: <span id="upcomingCount">0</span></p>
+        </div>
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
